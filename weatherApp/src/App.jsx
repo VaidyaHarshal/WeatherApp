@@ -1,9 +1,15 @@
-import { useState } from "react";
+import Search from "./components/search/search";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <>Hello</>;
+  const handleOnSearchChange = (searchData) => {
+    console.log(searchData);
+  };
+  return (
+    <div className="container">
+      <Search onSearchChange={handleOnSearchChange} />
+    </div>
+  );
 }
 
 export default App;
